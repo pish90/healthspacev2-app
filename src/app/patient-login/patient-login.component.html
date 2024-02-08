@@ -1,0 +1,23 @@
+<div class="patient-login-container">
+    <h2>Patient Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required placeholder="Password">
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" (click)="login(username, password)">Login</button>
+    </form>
+    <br/>
+    <p>New to HealthSpace?</p>
+    <div class="new-user">
+      <button (click)="signup()">Create a new HealthSpace account</button>
+    </div>
+  </div>
+  
