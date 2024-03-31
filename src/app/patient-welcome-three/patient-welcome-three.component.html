@@ -1,0 +1,22 @@
+<div class="patient-welcome-three-container">
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <h2>Next of Kin Details</h2>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field class="input-field">
+          <input matInput placeholder="Next of Kin First Name">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <input matInput placeholder="Next of Kin Last Name">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+            <input matInput placeholder="Next of Kin Phone Number">
+          </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+    <div class="button-group">
+      <button mat-button (click)="skip()">Skip</button>
+      <button mat-raised-button color="primary" (click)="previous()" class="patient-welcome-three-previous-btn">Previous</button>
+      <button mat-raised-button color="primary" (click)="next()" class="patient-welcome-three-next-btn">Next</button>
+    </div>
+  </div>

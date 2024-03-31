@@ -1,0 +1,34 @@
+<div class="patient-login-container">
+  <div class="left-column">
+    <h2>Patient Login</h2>
+    <form>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" [(ngModel)]="username" name="username" required>
+      </mat-form-field><br/>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" [(ngModel)]="password" name="password" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="forgot-password">
+        <a mat-button routerLink="/forgot-password">Forgot Password?</a>
+      </div>
+      <button mat-raised-button color="primary" type="submit" (click)="login(username, password)" class="login-btn">Login</button>
+    </form>
+    <br/>
+    <p>New to HealthSpace?</p>
+    <div class="new-user">
+      <button mat-raised-button color="primary" (click)="registerPatientPage()" class="create-account-btn">Create a new HealthSpace account</button>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="right-column">
+    <p>Advertising space</p>
+  </div>    
+</div>
+  

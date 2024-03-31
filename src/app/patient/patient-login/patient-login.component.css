@@ -1,0 +1,55 @@
+.patient-login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 50px;
+}
+
+.divider {
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    margin-top: 20px;
+}
+  
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.create-account-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .create-account-btn:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,48 @@
+.patient-welcome-three-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .input-field {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .checkbox {
+    margin-top: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .patient-welcome-three-previous-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .patient-welcome-three-previous-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .patient-welcome-three-next-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .patient-welcome-three-next-btn:hover {
+    background-color: #0056b3;
+  }
+  

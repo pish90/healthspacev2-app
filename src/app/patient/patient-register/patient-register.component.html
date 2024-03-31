@@ -1,0 +1,40 @@
+<div class="patient-register-container">
+  <h2>Patient Registration</h2>
+  <mat-radio-group [(ngModel)]="loginType">
+    <mat-radio-button value="parent">Parent</mat-radio-button>
+    <mat-radio-button value="guardian">Guardian</mat-radio-button>
+    <mat-radio-button value="child">Child</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field class="input-field">
+    <input matInput placeholder="Username">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput placeholder="First Name">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput placeholder="Last Name">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput placeholder="Mobile Number">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput type="password" placeholder="Password">
+  </mat-form-field>
+  <mat-form-field class="input-field">
+    <input matInput type="password" placeholder="Confirm Password">
+  </mat-form-field>
+  <mat-checkbox class="checkbox">I have read, and I agree to the<a href="#">Terms & Conditions </a> of this website</mat-checkbox>
+  <div class="button-group">
+    <button mat-raised-button color="primary" type="submit" (click)="register(username, firstname, lastname, email, mobileNumber, password)" class="register-btn">Register</button>
+    <div class="login-link">
+      Already have an account? <a href="#">Login</a>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="right-column">
+  <p>Advertising space</p>
+</div>
+</div>

@@ -1,0 +1,43 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button>
+        <h4>HP Search</h4>        
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+        <mat-list>
+            <mat-list-item>
+                <mat-icon>list</mat-icon>
+                <a routerLink="/registerPatient" style="text-decoration: none;">My HPs List</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>notes</mat-icon>
+                <a routerLink="/patientHealthProfessionalNotes" style="text-decoration: none;">My HP Notes</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>date_range</mat-icon>
+                <a routerLink="/patientAppointments" style="text-decoration: none;">Appointments</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>medical_information</mat-icon>
+                <a routerLink="/patientMedicalHistory" style="text-decoration: none;">Medical History</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>list</mat-icon>
+                <a routerLink="/patientLabResults" style="text-decoration: none;">Lab Results</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>list</mat-icon>
+                <a routerLink="/patientScriptsRefills" style="text-decoration: none;">Scripts & Refills</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>mail</mat-icon>
+                <a routerLink="/patientLetters" style="text-decoration: none;">Letters</a>
+            </mat-list-item>
+        </mat-list>        
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

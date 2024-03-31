@@ -1,0 +1,51 @@
+<div class="patient-welcome-one-container">
+    <h2>Welcome to HealthSpace</h2>
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <br>
+    <h3>Patient Details</h3>
+    <mat-form-field>
+      <input matInput placeholder="First Name" [(ngModel)]="firstName">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Last Name" [(ngModel)]="lastName">
+    </mat-form-field>
+    <br>
+    <div>
+      <label>Gender:</label>
+      <mat-radio-group [(ngModel)]="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="non-conforming">Non-conforming</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <br>
+    <div>
+      <label>Are you a citizen?</label>
+      <mat-radio-group [(ngModel)]="isCitizen">
+        <mat-radio-button [value]="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="ID Number" [(ngModel)]="idNumber">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="dobPicker" placeholder="Date of Birth" [(ngModel)]="dob">
+      <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dobPicker></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Employer" [(ngModel)]="employer">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Occupation" [(ngModel)]="occupation">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="next()" class="patient-welcome-one-next-btn">Next</button>
+  </div>
+  

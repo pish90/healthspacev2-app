@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SignUpRequest } from './models/signuprequest.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,13 +24,19 @@ export class UserService {
     return this.http.post("http://localhost:8081/v2/api/auth/login", loginRequest, httpOptions);
   }
 
-  public signup(signUpRequest:SignUpRequest) {
+  public signup(signUpRequest?:SignUpRequest) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type' : 'application/json'
       })
     };
 
-    return this.http.post("http://localhost:8081/v2/api/auth/signup", signUpRequest, httpOptions);
+    return this.http.post("http://localhost:8081/v2/api/auth/register", signUpRequest, httpOptions);
   }
+
+  // findById(id: number): Observable<User>{
+  //   return this.http.get(this.apiUrl + id)
+  //   .map((res:Response) => res.json())
+  //   .catch((error:any) => Observable.throw(error.json().error || 'Error'));
+  // }
 }

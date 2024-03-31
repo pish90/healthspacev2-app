@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
-import { SignUpRequest } from '../models/signuprequest.model';
+import { UserService } from '../../user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,8 +10,8 @@ import { Router } from '@angular/router';
 export class PatientLoginComponent implements OnInit {
   username: string = '';
   password: string = '';
-  signUpRequest = new SignUpRequest;
-  message: any;
+  passwordFieldType: string = 'password';
+  hide = true;
 
   constructor(private service:UserService, private router: Router) { }
 
@@ -22,19 +21,20 @@ export class PatientLoginComponent implements OnInit {
   login(username:string, password:string) {
     let resp = this.service.login(username, password);
     resp.subscribe(data => (
-      this.message = data,
-      this.router.navigate(["/home"]),
+      this.router.navigate(["/home2"]),
       console.log(data)
     ));
     console.log('Username:', this.username);
     console.log('Password:', this.password);    
   }
 
-  signup() {
-    let resp = this.service.signup(this.signUpRequest);
-    resp.subscribe(data => (
-      console.log(data)
-    ));
+  registerPatientPage() {
+      this.router.navigate(["/registerPatient"])
   }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
+
 
 }
