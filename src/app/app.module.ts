@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {DatePipe} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +44,7 @@ import { PatientMedicalHistoryComponent } from './patient/patient-medical-histor
 import { PatientLabResultsComponent } from './patient/patient-lab-results/patient-lab-results.component';
 import { PatientScriptsRefillsComponent } from './patient/patient-scripts-refills/patient-scripts-refills.component';
 import { PatientLettersComponent } from './patient/patient-letters/patient-letters.component';
+import { HealthProfessionalComponent } from './health-professional/health-professional.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,8 @@ import { PatientLettersComponent } from './patient/patient-letters/patient-lette
     PatientMedicalHistoryComponent,
     PatientLabResultsComponent,
     PatientScriptsRefillsComponent,
-    PatientLettersComponent
+    PatientLettersComponent,
+    HealthProfessionalComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +93,11 @@ import { PatientLettersComponent } from './patient/patient-letters/patient-lette
     MatSidenavModule,
     MatToolbarModule
   ],
-  providers: [UserService, provideAnimationsAsync()],
+  providers: [
+    UserService,     
+    provideAnimationsAsync(), 
+    DatePipe],
+    
   bootstrap: [AppComponent]
 })
 export class AppModule { }

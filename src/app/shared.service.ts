@@ -1,22 +1,21 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Patient } from './patient';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PatientService {
+export class SharedService {
 
-  constructor(private http: HttpClient) { }
-
-  public savePatient(patient: Patient) {
+  constructor(private http:HttpClient) { }
+  
+  getHpList():Observable<any[]> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type' : 'application/json'
       })
     };
-
-    let save = {patient};
-    return this.http.post("http://localhost:8081/v2/api/patient/save", save, httpOptions);
+    return this.http.get<any>("http://localhost:8081/v2/api/hp/list", httpOptions);
   }
+
 }
